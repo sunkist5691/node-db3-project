@@ -73,6 +73,7 @@ router.post('/:id/steps', (req, res) => {
     .then(step => {
       res.status(201).json(step);
     })
+    // this ".then" runs if line 68 successfully add step
     .catch(err => {
       res.status(500).json({ message: 'Failed to create new step' });
     });
